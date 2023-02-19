@@ -1,5 +1,5 @@
 import { useSelector, useDispatch } from 'react-redux';
-import { change } from '../../redux/slice';
+import { change } from 'redux/contacts/slice';
 import { StyledInput } from './SearchInput.styled';
 
 const SearchInput = () => {

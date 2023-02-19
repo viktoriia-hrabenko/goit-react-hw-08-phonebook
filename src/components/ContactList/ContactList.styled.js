@@ -2,7 +2,6 @@ import styled from 'styled-components';
 
 export const StyledList = styled.ul`
   margin: 0 auto;
-  width: 500px;
   border: 2px solid rgba(0, 0, 0, 0.2);
   border-radius: 5px;
   overflow: hidden;
@@ -10,7 +9,7 @@ export const StyledList = styled.ul`
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 10px 30px;
+    padding: 10px 10px;
   }
   li:nth-child(odd) {
     background-color: rgb(245, 245, 245);

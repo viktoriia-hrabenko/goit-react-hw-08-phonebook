@@ -1,6 +1,6 @@
 import { useSelector, useDispatch } from 'react-redux';
 import { useEffect } from 'react';
-import { fetchContacts, deleteContact } from 'redux/operations';
+import { fetchContacts, deleteContact } from 'redux/contacts/operations';
 import { Loader } from 'components/Loader/Loader';
 import ContactItem from './ContactItem/ContactItem';
 import Notification from 'components/Notification/Notification';
@@ -29,9 +29,9 @@ const ContactList = () => {
       {loading && Loader}
       {contactsList.length ? (
         <StyledList>
-          {contactsList.map(({ id, name, phone }) => (
+          {contactsList.map(({ id, name, number }) => (
             <li className="listItem" key={id}>
-              <ContactItem name={name} number={phone} />
+              <ContactItem name={name} number={number} />
               <Button
                 title="Delete"
                 onClick={() => dispatch(deleteContact(id))}
@@ -44,7 +44,6 @@ const ContactList = () => {
           text={filter ? 'Could not find this name' : 'Contact list is empty'}
         />
       )}
-      ;
     </>
   );
 };
